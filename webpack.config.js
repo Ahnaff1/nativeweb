@@ -9,9 +9,19 @@ const {presets} = require(`${appDirectory}/babel.config.js`);
 const compileNodeModules = [
   // Add every react-native package that needs compiling
   // 'react-native-gesture-handler',
+  "@react-navigation/native",
+  "@react-navigation/stack",
+  "axios",
   "react",
   "react-native",
+  "react-native-axios",
+  "react-native-gesture-handler",
+  "react-native-paper",
+  "react-native-safe-area-context",
+  "react-native-screens",
+  "react-native-vector-icons",
   "react-native-web"
+  
 ].map((moduleName) => path.resolve(appDirectory, `node_modules/${moduleName}`));
 
 const babelLoaderConfiguration = {
